@@ -14,6 +14,7 @@ from models.user import User
 
 @app_views.route("/status", strict_slashes=False, methods=["GET"])
 def status():
+    """this documentation method"""
     return {
         "status": "OK",
     }
@@ -21,6 +22,7 @@ def status():
 
 @app_views.route("/stats", strict_slashes=False, methods=["GET"])
 def stats():
+    """this documentation method"""
     amenities = storage.count(Amenity)
     cities = storage.count(City)
     places = storage.count(Place)
